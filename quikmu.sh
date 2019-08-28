@@ -52,25 +52,32 @@ scriptTail() {
 #==============================================================================
 printUsage() {
   cat << usage
-quikmu [OPTION](WIP)
+quikmu [OPTION] NAME
 
   quikmu is a helper script to create, edit and delte qemu VM's in the 
   directory the script lives in
 
-  OPTION:
+OPTION:
 
-    -c        Create a new VM
+    -c <NAME>    Create a new VM
+                  -k|--Cores <INT>        give number of Cores(at least one)
+                  -M|--Memmory <INT>[M|G] give size of RAM
+                                          M for Megabyte and G for Gigabyte
+                  -i|--CDRom <PATH>       give path of Instalation-Images        
+                  -D|--Drive <INT>[M|G]   make the Instalation Drive             
+                  -n|--Network            give the Networkaddress for the
+                                          Machien and its periferils
+                
+    --create    The same as -c
+
+    -d <NAME>   Delete a VM
     
-    --create
+    --delete    The same as -d
 
-    -d        Delete a VM
-    
-    --delete  
+    -e <NAME>   Edit an existing VM
 
-    -e        Edit an existing VM
+    --edit      The same as -e
 
-    --edit
-    
 usage
 }
 
