@@ -52,7 +52,25 @@ scriptTail() {
 #==============================================================================
 printUsage() {
   cat << usage
-  Usage: (WIP)
+quikmu [OPTION](WIP)
+
+  quikmu is a helper script to create, edit and delte qemu VM's in the 
+  directory the script lives in
+
+  OPTION:
+
+    -c        Create a new VM
+    
+    --create
+
+    -d        Delete a VM
+    
+    --delete  
+
+    -e        Edit an existing VM
+
+    --edit
+    
 usage
 }
 
